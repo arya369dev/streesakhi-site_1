@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3B0814">
+<title>Streesakhi Admin</title>
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin">
+<div id="app"><div class="spinner"></div></div>
+<div class="drawer-bg" id="drawer-bg"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <header><h2 id="drawer-title">Edit</h2><button class="x" type="button" id="drawer-x" aria-label="Close">&times;</button></header>
+  <div class="d-body" id="drawer-body"></div>
+  <footer id="drawer-foot"></footer>
+</aside>
+<div id="print-area"></div>
+<script src="/js/config.js"></script>
+<script src="/js/demo-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="/js/store.js"></script>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

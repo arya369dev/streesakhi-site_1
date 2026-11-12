@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Streesakhi</title>
+<meta name="description" content="Secure checkout with Cash on Delivery and UPI.">
+<meta name="theme-color" content="#5C0F21">
+<meta property="og:title" content="Checkout | Streesakhi">
+<meta property="og:description" content="Secure checkout with Cash on Delivery and UPI.">
+<meta property="og:image" content="/assets/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="cart.html">Cart</a> / Checkout</div><h1>Checkout</h1></div></div>
+<form class="wrap two-col" id="checkout" novalidate>
+  <div class="panel">
+    <h2>Delivery details</h2>
+    <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required><span class="err"></span></div>
+    <div class="row2">
+      <div class="field"><label for="phone">Mobile number (10 digits)</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" required><span class="err"></span></div>
+      <div class="field"><label for="email">Email (for order updates)</label><input id="email" name="email" type="email" autocomplete="email"><span class="err"></span></div>
+    </div>
+    <div class="field"><label for="address">House no., street, area, landmark</label><textarea id="address" name="address" rows="2" autocomplete="street-address" required></textarea><span class="err"></span></div>
+    <div class="row2">
+      <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" required><span class="err"></span></div>
+      <div class="field"><label for="pincode">Pincode</label><input id="pincode" name="pincode" inputmode="numeric" autocomplete="postal-code" required><span class="err"></span></div>
+    </div>
+    <div class="field"><label for="state">State</label><select id="state" name="state" autocomplete="address-level1" required></select><span class="err"></span></div>
+    <h2 style="margin-top:18px">Payment</h2>
+    <div id="pay-options"></div>
+  </div>
+  <div>
+    <div class="panel" id="summary"><div class="spinner"></div></div>
+  </div>
+</form>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/demo-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/store.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/layout.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+<script src="js/pages/checkout.js"></script>
+</body>
+</html>
